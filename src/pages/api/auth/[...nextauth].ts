@@ -8,7 +8,7 @@ export default NextAuth({
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
       authorization: {
         params: {
-          scope: ""
+          scope: "user:email"
         }
       }
     }),
