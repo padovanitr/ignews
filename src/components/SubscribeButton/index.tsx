@@ -4,16 +4,12 @@ import { api } from '../../services/api';
 import { getStripeJs } from '../../services/stripe-js';
 import styles from './styles.module.scss';
 
-interface SubscribeButtonProps {
-    priceId: string;
-}
-
 // places in next where you can variable environments and make secure procedures
 // getServerSideProps (SSR) - useful for on loading pages
 // getStaticProps (SSG)     - useful for on loading pages
 // API routes               - useful for user's actions
 
-export function SubscribeButton({ priceId }: SubscribeButtonProps){
+export function SubscribeButton(){
     const { data: session, status } = useSession();
     const router = useRouter();
 

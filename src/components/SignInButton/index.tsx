@@ -6,6 +6,10 @@ import styles from './styles.module.scss';
 
 export function SignInButton() {
     const { data: session, status } = useSession()
+    const sessi = useSession()
+    console.log(sessi)
+    console.log('session', session)
+    
 
     return session ? (
         <button 
